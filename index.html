@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABI | מרכז הלקוחות</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Assistant", "Heebo", sans-serif;
+    background: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  header h1 {
+    font-size: 3rem;
+    background: linear-gradient(135deg, #f9a8d4, #c9a84c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 900;
+    letter-spacing: -1px;
+  }
+  header p {
+    color: #888;
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+    min-width: 260px;
+    max-width: 340px;
+    border: 2px solid #ebebeb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+  }
+  .card-pricelist::before {
+    background: linear-gradient(90deg, #f9a8d4, #e879a0);
+  }
+  .card-catalog::before {
+    background: linear-gradient(90deg, #c9a84c, #f0d080);
+  }
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    border-color: transparent;
+  }
+  .card-pricelist:hover { border-color: #f9a8d4; }
+  .card-catalog:hover { border-color: #c9a84c; }
+
+  .card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 18px;
+    display: block;
+  }
+  .card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+  }
+  .card p {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .card-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: white;
+    border: none;
+  }
+  .card-pricelist .card-btn {
+    background: linear-gradient(135deg, #f9a8d4, #e879a0);
+  }
+  .card-catalog .card-btn {
+    background: linear-gradient(135deg, #c9a84c, #b8860b);
+  }
+
+  footer {
+    margin-top: 50px;
+    color: #bbb;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+  footer a { color: #f9a8d4; text-decoration: none; font-weight: 600; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 2.2rem; }
+    .card { padding: 30px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ABI</h1>
+  <p>מוצרי טיפוח מקצועיים לציפורניים</p>
+</header>
+
+<div class="cards">
+
+  <a class="card card-pricelist" href="https://abi-pricelist.vercel.app/" target="_blank">
+    <span class="card-icon">📋</span>
+    <h2>מחירון 2026</h2>
+    <p>מחירי כל המוצרים, מבצעים עדכניים ותמונות</p>
+    <span class="card-btn">לצפייה במחירון</span>
+  </a>
+
+  <a class="card card-catalog" href="https://abi-dashboard-kappa.vercel.app/" target="_blank">
+    <span class="card-icon">📁</span>
+    <h2>קטלוג חומרי שיווק</h2>
+    <p>תמונות, סרטונים וחומרים להורדה לפי מוצר</p>
+    <span class="card-btn">לקטלוג</span>
+  </a>
+
+</div>
+
+<footer>
+  <p>📱 <a href="https://abi.co.il">abi.co.il</a> &nbsp;|&nbsp; 📸 <a href="https://instagram.com/gello_layla_addict">@gello_layla_addict</a></p>
+</footer>
+
+</body>
+</html>
